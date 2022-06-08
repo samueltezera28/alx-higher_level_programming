@@ -1,6 +1,9 @@
 def square_matrix_simple(matrix=[]):
 
-    new_matrix = [[x ** 2 for x in row] for row in matrix]
+    new_matrix = matrix
+    for i in len(new_matrix):
+        for j in len(new_matrix):
+            new_matrix=row*row
     return new_matrix
 
 matrix = [
