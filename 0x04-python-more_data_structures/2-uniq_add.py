@@ -4,4 +4,4 @@ def uniq_add(my_list=[]):
     result = 0
     for i in set1:
         result = result + i
-    return [result]
+    return result
