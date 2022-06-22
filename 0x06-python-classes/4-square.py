@@ -41,3 +41,15 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = 
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
