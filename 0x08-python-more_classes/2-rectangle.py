@@ -57,7 +57,7 @@ class Rectangle:
         """Calculates the area of a Rectangle instance
 
         Returns:
-            Area of the rectangle, given by height * width
+            Area of the the rectangle, given by height * width
         """
         return self.__width * self.__height
 
