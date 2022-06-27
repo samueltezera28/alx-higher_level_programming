@@ -1,68 +1,83 @@
 #!/usr/bin/python3
-class Square:
-    """Represents a square.
-    Private instance attribute: size:
-        - property def size(self)
-        - property setter def size(self, value)
-    Private instance attribute: position:
-        - property def position(self)
-        - property setter def position(self, value)
-    Instantiation with optional size and optional position.
-    Public instance method: def area(self).
-    Public instance method: def my_print(self).
-    """
+""" Creates an empty class called Square
+"""
 
+
+class Square:
+    """ Empty class with size private attribute
+    """
     def __init__(self, size=0, position=(0, 0)):
-        """Initializes the data."""
-        self.size = size
+        """
+                Instantiation with size
+        Args:
+            size: size of the square
+            position: postion of the square
+        """
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
         self.position = position
+
+    def area(self):
+        """
+        Returns the area of the square
+        """
+        return (self.__size * self.__size)
 
     @property
     def size(self):
-        """Retrieves the size."""
+        """
+        size getter. Handle size errors
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Sets the size to a value."""
-        if not isinstance(value, int):
+        """
+        size setter. Set the size square
+        """
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    @property
-    def position(self):
-        """Retrieves the position."""
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        """Sets the position to a value."""
-        if not isinstance(value, tuple) or len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[0], int) or not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
-
-    def area(self):
-        """Returns the current square area."""
-        return self.__size ** 2
-
     def my_print(self):
-        """Prints to stdout the square with the character #,
-        at the position given by the position attribute.
+        """
+        Print a square with the character # at position given
         """
         if self.__size == 0:
             print()
             return
-        for y in range(0, self.__position[1]):
+        for j in range(self.__position[1]):
             print()
-        for i in range(0, self.__size):
-            for x in range(0, self.__position[0]):
-                print(" ", end="")
-            for j in range(0, self.__size):
-                print("#", end="")
-            print()
+        for i in range(self.__size):
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
+
+    @property
+    def position(self):
+        """
+        position setter. Set the position of square
+        """
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """
+        Handle position with errors
+        """
+        if type(value) != tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif isinstance(value[0], int) is False:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif isinstance(value[1], int) is False:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
