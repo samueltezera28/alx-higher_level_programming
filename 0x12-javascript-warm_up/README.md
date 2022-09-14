@@ -147,4 +147,6 @@ You are not allowed to use var
 
 ###100-let_me_const.js
   
+  Write a file that modifies the value of myVar to 333
+  
 
