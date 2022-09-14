@@ -166,3 +166,5 @@ You are not allowed to use var
 The function must be visible from outside
 Prototype: function (number, theFunction)
 You are not allowed to use var
+  
+  ###103-object_fct.js
