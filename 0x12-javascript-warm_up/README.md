@@ -173,3 +173,4 @@ Update this script by adding a new function incr that increments the integer val
 You are not allowed to use var
 a
   b
+  c
