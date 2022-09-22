@@ -137,5 +137,45 @@ Update this script to replace the value 12 with 89:
 
 You are not allowed to use var
 
+##13-add.js
 
-## and advanced projects to be worked on
+Write a function that returns the addition of 2 integers.
+
+The function must be visible from outside
+The name of the function must be add
+You are not allowed to use var
+
+###100-let_me_const.js
+  
+  Write a file that modifies the value of myVar to 333
+
+  
+  ##101-call_me_moby.js
+  
+  
+Write a function that executes x times a function.
+
+The function must be visible from outside
+Prototype: function (x, theFunction)
+You are not allowed to use var
+  
+  ##102-add_me_maybe.js
+  
+  Write a function that increments and calls a function.
+
+The function must be visible from outside
+Prototype: function (number, theFunction)
+You are not allowed to use var
+  
+  ###103-object_fct.js
+Update this script by adding a new function incr that increments the integer value.
+
+You are not allowed to use var
+a
+  b
+  c
+  d
+e
+f
+  g
+  h
